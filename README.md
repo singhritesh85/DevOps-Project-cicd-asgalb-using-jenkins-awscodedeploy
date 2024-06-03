@@ -23,6 +23,7 @@ Create Application, Deployment Group and an IAM Policy which is required by Jenk
 <br><br/>
 **IAM POlicy**
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/b60a37c2-3cf5-4475-a6e4-7a203fb6a07e)
+Using this policy you can create a user or IAM Role and using this user/IAM Role you can authorize Jenkins to run the Deployment in AWS CodeDeploy.
 **Application for AWS CodeDeploy**
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/ae1f8381-d53a-406f-8a77-b353b7b665c8)
 **Deployment Group for AWS CodeDeploy**
@@ -47,3 +48,8 @@ Endpoint of MySQL RDS has been updated in the file login.jsp and userRegistratio
 <br><br/>
 After Successful execution of Jenkins Job Deployment will be started in AWS Code Deploy and which will be completed successfuly.
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/a8038191-799a-4cd7-b6d1-9a229498df66)
+<br><br/>
+Finally using the URL you can access the application as shown in the screenshot below.
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/d9f28eac-0c7e-4115-bde1-29315ebbf6b4)
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/3dc66233-9442-4a22-878c-5481aaa7b7b4)
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/b1efb612-c394-4b88-bca6-f7069126c886)
