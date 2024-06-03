@@ -38,6 +38,39 @@ Using this policy you can create a user or IAM Role and using this user/IAM Role
 <br><br/>
 The environment variable can be set using Environment Injector plugin during the Build Steps as shown in the screenshot below.
 <br><br/>
+During Build steps at Execute Shell I have used below shell script using which code will be Build using the Maven and it will check S3 bucket with the name of mederma2024 in the region us-east-2. If it exists then it will use that S3 bucket otherwise create it with the bucket policy as mentioned below. This S3 bucket will keep the revision for CodeDeploy which will be finally deployed to EC2 Instances created as a part of AutoScaling Group. SonarQube Quality Gate has been implemented using sonar.qualitygate.wait=true and sonar.qualitygate.timeout=300. If Quality Gate fails then it will fail the Jenkins Job there itself.
+```
+mvn clean install sonar:sonar -Dsonar.qualitygate.wait=true -Dsonar.qualitygate.timeout=300
+BUCKET_EXISTANCE=`aws s3 ls s3://mederma2024 --region=us-east-2 2>&1`
+if [ "$BUCKET_EXISTANCE | grep -o NoSuchBucket" == "NoSuchBucket" ]
+then
+  {
+    aws s3 mb s3://mederma2024 --region=us-east-2
+    cat > codedeploy-bucket-policy.json <<END_FOR_SCRIPT
+{
+	"Version": "2012-10-17",
+	"Id": "S3PolicyId1",
+	"Statement": [
+		{
+			"Sid": "IPAllow",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": "s3:*",
+			"Resource": "arn:aws:s3:::mederma2024/*",
+			"Condition": {
+				"IpAddress": {"aws:SourceIp": "18.224.157.99/32"}
+			} 
+		} 
+	]
+}
+END_FOR_SCRIPT
+    aws s3api put-bucket-policy --bucket mederma2024 --policy file://codedeploy-bucket-policy.json
+  }
+else
+  echo "Considering the existed bucket"
+fi
+```
+<br><br/>
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/c89dd6a8-0b5c-436e-8006-192c0d6155d9)
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/088bae04-678f-43af-89d5-502aa184fe32)
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/2cc7e787-cf70-4003-a1e2-06d4151b8306)
