@@ -41,5 +41,9 @@ Create Application, Deployment Group and an IAM Policy which is required by Jenk
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/ebf62259-ff3a-4026-a69d-34968b88f800)
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/29bbb9f3-c291-4559-9e53-7c6a144c6234)
 <br><br/>
+Endpoint of MySQL RDS has been updated in the file login.jsp and userRegistration.jsp present at the path src/main/webapp/ of the GitHub repository as shown in the screenshot below
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/a08ceeb7-df54-4ce3-942b-762995046373)
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/8e3a682e-4aef-464c-a56a-eee50218469b)
+<br><br/>
 After Successful execution of Jenkins Job Deployment will be started in AWS Code Deploy and which will be completed successfuly.
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/a8038191-799a-4cd7-b6d1-9a229498df66)
