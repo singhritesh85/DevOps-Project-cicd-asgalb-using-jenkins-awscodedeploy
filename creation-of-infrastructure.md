@@ -15,3 +15,4 @@ cd DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy
 10. Finally change the directory to SonarQube-Nexus/sonarqube-nexus/ and provide required parameters in terraform.tfvars and run the command terraform init then terraform apply -auto-approve
 11. Provide ssh public key in the file user_data_nexus.sh and user_data_sonarqube.sh present at the path SonarQube-Nexus/sonarqube-nexus/
 ```
+![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/4117c9d1-b70d-4ebe-9e35-2b60602e6411)
