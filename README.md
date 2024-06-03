@@ -89,3 +89,22 @@ Finally using the URL you can access the application as shown in the screenshot 
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/d9f28eac-0c7e-4115-bde1-29315ebbf6b4)
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/3dc66233-9442-4a22-878c-5481aaa7b7b4)
 ![image](https://github.com/singhritesh85/DevOps-Project-cicd-asgalb-using-jenkins-awscodedeploy/assets/56765895/b1efb612-c394-4b88-bca6-f7069126c886)
+<br><br/>
+<br><br/>
+<br><br/>
+**Source Code:**- https://github.com/singhritesh85/aws-rds-java-using-codedeploy.git
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+<br><br/>
+```
+Reference:- https://ashok198510.hashnode.dev/cloud-native-two-tier-application-deployment-with-eks-tomcat-and-rds-in-aws
+            https://github.com/Ashoksana/aws-rds-java.git
+```
